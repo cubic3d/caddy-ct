@@ -28,12 +28,16 @@ func init() {
 	httpcaddyfile.RegisterHandlerDirective("ct", parseCaddyfile)
 }
 
+// Ct allows to transpile YAML based configuration into a JSON ignition to be used with Flatcar or Fedora CoreOS.
 type Ct struct {
 	logger *zap.Logger
 
-	Strict    bool     `json:"strict,omitempty"`
+	// Fail on non critical errors (default: false)
+	Strict bool `json:"strict,omitempty"`
+	// Only transpile specific MIME types (default: all)
 	MIMETypes []string `json:"mime_types,omitempty"`
-	Platform  string   `json:"platform,omitempty"`
+	// Only for dynamic data must be one of supported types by ct (default: none)
+	Platform string `json:"platform,omitempty"`
 }
 
 func (Ct) CaddyModule() caddy.ModuleInfo {

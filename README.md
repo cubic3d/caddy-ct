@@ -60,3 +60,4 @@ See [xcaddy](https://github.com/caddyserver/xcaddy), short:
 xcaddy build \
   --with github.com/cubic3d/caddy-ct
 ```
+or download from https://caddyserver.com/download by selecting this module.
