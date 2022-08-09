@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/caddyserver/caddy/v2 v2.4.3
 	github.com/kinvolk/container-linux-config-transpiler v0.9.1
-	go.uber.org/zap v1.19.1
+	go.uber.org/zap v1.22.0
 )
 
 require (
